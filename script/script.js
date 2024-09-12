@@ -100,4 +100,9 @@ learnMore.addEventListener('click', event => {
   var bottomLayer = document.getElementById('bottomLayer');
   bottomLayer.style.display = "flex";
   bottomLayer.classList.add("fade-in-element");
+  setTimeout(function() {
+    var title = document.getElementById('title');
+    title.style.display = "block";
+    title.classList.add('type');
+  }, 10000);
 });

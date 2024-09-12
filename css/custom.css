@@ -71,6 +71,130 @@ footer img {
     display: none;
 }
 
+.bottom-layer span {
+    z-index: 10;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 80px;
+    font-family: monospace;
+    color: rgb(20, 169, 20);
+    text-shadow: #7ee74e 3px 0px;
+}
+
+#title {
+    display: none;
+}
+
+/*.type {
+    animation: typing 5s steps(40, end);
+}*/
+
+#title::before {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    content: "";
+    background: inherit;
+    animation: chitchat linear both 2.5s;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes chitchat {
+    0% {
+      content: "";
+    }
+  
+    5% {
+      content: "5";
+    }
+  
+    10% {
+      content: "|/";
+    }
+  
+    15% {
+      content: "W_'";
+    }
+  
+    20% {
+      content: "Welç°";
+    }
+  
+    25% {
+      content: "Welco@`";
+    }
+  
+    30% {
+      content: "Welcom/3";
+    }
+  
+    35% {
+      content: "Welcome(è";
+    }
+  
+    40% {
+      content: "Welcome [0{";
+    }
+  
+    45% {
+      content: "Welcome t7)?";
+    }
+  
+    50% {
+      content: "Welcome to 1_^";
+    }
+  
+    55% {
+      content: "Welcome to t~(j";
+    }
+  
+    60% {
+      content: "Welcome to th2n@";
+    }
+  
+    65% {
+      content: "Welcome to the 6èç";
+    }
+  
+    70% {
+      content: "Welcome to the m(éu";
+    }
+  
+    75% {
+      content: "Welcome to the ma-+(";
+    }
+  
+    80% {
+      content: "Welcome to the mat^ù$";
+    }
+  
+    85% {
+      content: "Welcome to the matr4+?";
+    }
+  
+    90% {
+      content: "Welcome to the matri=}";
+    }
+  
+    95% {
+      content: "Welcome to the matri]";
+    }
+  
+    100% {
+      content: "Welcome to the matrix";
+    }
+  }
+
 .bottom-layer, .top-layer {
     grid-area: 1 / 1;
 }
