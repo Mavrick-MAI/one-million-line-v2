@@ -1,0 +1,86 @@
+#home {
+    background-image: url("../images/hero-image.jpg");
+}
+
+#home h1 {
+    font-size: 6em;
+}
+
+#home p {
+    font-size: 1.5em;
+}
+
+#home img {
+    padding-bottom: 4vh;
+}
+
+#who img {
+    padding-top: 8vh;
+    padding-bottom: 4vh;
+}
+
+hr {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    color: red;
+}
+
+#who p {
+    font-size: 1.42em;
+    padding-bottom: 2vh;
+}
+
+#get-involved h2 {
+    padding-top: 4vh;
+}
+
+footer {
+    height: 150px;
+}
+
+footer img {
+    margin-top: 8vh;
+}
+
+#myBtn {
+    margin-right: 1vw;
+    margin-bottom: 1vh;
+    display: none;
+    background: none;
+    border: none;
+}
+
+#matrix {
+    display: block;
+    position: absolute;
+    width: auto;
+}
+
+#matrix2 {
+    display: block;
+    position: absolute;
+    width: auto;
+}
+
+.wrapper {
+    display: grid;
+}
+
+.bottom-layer {
+    display: none;
+}
+
+.bottom-layer, .top-layer {
+    grid-area: 1 / 1;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in-element {
+    opacity: 0;
+    animation: fadeIn 10s ease-in-out forwards;
+}
