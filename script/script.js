@@ -104,5 +104,8 @@ learnMore.addEventListener('click', event => {
     var title = document.getElementById('title');
     title.style.display = "block";
     title.classList.add('type');
+
+    var who = document.getElementById('who');
+    who.classList.add("rotating");
   }, 10000);
 });

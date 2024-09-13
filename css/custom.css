@@ -208,3 +208,16 @@ footer img {
     opacity: 0;
     animation: fadeIn 10s ease-in-out forwards;
 }
+
+@keyframes rotating {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+
+.rotating {
+  animation: rotating 2s forwards;
+}
