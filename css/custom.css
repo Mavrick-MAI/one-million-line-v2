@@ -230,20 +230,25 @@ footer img {
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
-.left-card::before {
+.left-card-right {
+  position: absolute;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
   background-color: grey;
-  width: 100px;
+  width: 2vw;
   height: 100%;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  right: 0px;
+  transform: rotateY(90deg) translateZ(1vw) translateX(1vw); 
 }
 
 /* This container is needed to position the front and back side */
 .left-card-inner {
+  background-color: black;
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 2s;
+  transition: transform 4s;
   transform-style: preserve-3d;
 }
 
@@ -270,5 +275,5 @@ footer img {
 .left-card-back {
   background-color: dodgerblue;
   color: white;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateZ(2vw);
 }
