@@ -97,15 +97,20 @@ update();
 var learnMore = document.getElementById('matrixButton');
 learnMore.addEventListener('click', event => {
   event.preventDefault;
-  var bottomLayer = document.getElementById('bottomLayer');
+  var bottomLayer = document.getElementById('bottomLayerHome');
   bottomLayer.style.display = "flex";
   bottomLayer.classList.add("fade-in-element");
+
+  var topLayerWho = document.getElementById('topLayerWho');
+  topLayerWho.classList.add("fade-out-element");
   setTimeout(function() {
     var title = document.getElementById('title');
     title.style.display = "block";
     title.classList.add('type');
 
-    var who = document.getElementById('who');
-    who.classList.add("rotating");
+    var bottomLayerWho = document.getElementById('bottomLayerWho');
+    bottomLayerWho.style.display = "flex";
+    /*bottomLayerWho.classList.add("rotating");*/
+
   }, 10000);
 });
