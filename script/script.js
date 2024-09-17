@@ -10,6 +10,15 @@ function scrollFunction() {
   } else {
     mybutton.style.display = "none";
   }
+
+  var leftCard = document.getElementById("leftCard");
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    leftCard.classList.add('left-card-flip');
+    leftCard.classList.remove('left-card-flip-back');
+  } else {
+    leftCard.classList.add('left-card-flip-back');
+    leftCard.classList.remove('left-card-flip');
+  }
 }
 
 // When the user clicks on the button, scroll to the top of the document
@@ -19,13 +28,14 @@ function topFunction() {
 }
 
 var home = document.getElementById('home');
+var who = document.getElementById('who-wrap');
 var canvas = document.getElementById( 'matrix' );
 ctx = canvas.getContext( '2d' );
 var canvas2 = document.getElementById( 'matrix2' ),
 ctx2 = canvas2.getContext( '2d' ),
 // full screen dimensions
-cw = home.offsetWidth,
-ch = home.offsetHeight,
+cw = home.offsetWidth + who.offsetHeight,
+ch = home.offsetHeight + who.offsetHeight,
 charArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
 maxCharCount = 200,
 fallingCharArr = [],
@@ -110,7 +120,5 @@ learnMore.addEventListener('click', event => {
 
     var bottomLayerWho = document.getElementById('bottomLayerWho');
     bottomLayerWho.style.display = "flex";
-    /*bottomLayerWho.classList.add("rotating");*/
-
   }, 10000);
 });
