@@ -4,6 +4,9 @@ let mybutton = document.getElementById("myBtn");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
+var home = document.getElementById('home');
+var who = document.getElementById('who-wrap');
+
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -13,7 +16,7 @@ function scrollFunction() {
 
   var leftCard = document.getElementById("leftCard");
   var rightCard = document.getElementById("rightCard");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (document.body.scrollTop > (home.offsetHeight/2) || document.documentElement.scrollTop > (home.offsetHeight/2)) {
     leftCard.classList.add('left-card-flip');
     leftCard.classList.remove('left-card-flip-back');
     rightCard.classList.add('right-card-flip');
@@ -31,9 +34,6 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-var home = document.getElementById('home');
-var who = document.getElementById('who-wrap');
 var canvas = document.getElementById( 'matrix' );
 ctx = canvas.getContext( '2d' );
 var canvas2 = document.getElementById( 'matrix2' ),
