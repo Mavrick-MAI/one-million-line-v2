@@ -12,12 +12,17 @@ function scrollFunction() {
   }
 
   var leftCard = document.getElementById("leftCard");
+  var rightCard = document.getElementById("rightCard");
   if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
     leftCard.classList.add('left-card-flip');
     leftCard.classList.remove('left-card-flip-back');
+    rightCard.classList.add('right-card-flip');
+    rightCard.classList.remove('right-card-flip-back');
   } else {
     leftCard.classList.add('left-card-flip-back');
     leftCard.classList.remove('left-card-flip');
+    rightCard.classList.add('right-card-flip-back');
+    rightCard.classList.remove('right-card-flip');
   }
 }
 
@@ -67,16 +72,16 @@ Point.prototype.draw = function(ctx){
   ctx2.font = fontSize+"px san-serif";
   ctx2.fillText(this.value,this.x,this.y);
 
-    ctx.fillStyle = "#0F0";
-    ctx.font = fontSize+"px san-serif";
-    ctx.fillText(this.value,this.x,this.y);
+  ctx.fillStyle = "#0F0";
+  ctx.font = fontSize+"px san-serif";
+  ctx.fillText(this.value,this.x,this.y);
 
-    this.y += this.speed;
-    if(this.y > ch)
-    {
-      this.y = randomFloat(-100,0);
-      this.speed = randomFloat(2,5);
-    }
+  this.y += this.speed;
+  if(this.y > ch)
+  {
+    this.y = randomFloat(-100,0);
+    this.speed = randomFloat(2,5);
+  }
 }
 
 for(var i = 0; i < maxColums ; i++) {
@@ -114,11 +119,38 @@ learnMore.addEventListener('click', event => {
   var topLayerWho = document.getElementById('topLayerWho');
   topLayerWho.classList.add("fade-out-element");
   setTimeout(function() {
+    var whowrap = document.getElementById('who-wrap');
+    whowrap.style.backgroundColor = 'none';
+
     var title = document.getElementById('title');
     title.style.display = "block";
     title.classList.add('type');
 
     var bottomLayerWho = document.getElementById('bottomLayerWho');
     bottomLayerWho.style.display = "flex";
+
+    var bluePill = document.getElementById('bluePill');
+    var body = document.getElementsByTagName('body');
+    body[0].classList.remove('open-circle');
+    bluePill.addEventListener('click', (event) => {
+      body[0].classList.add('close-circle');
+      setTimeout(function() {
+        bottomLayer.style.display = "none";
+        bottomLayer.classList.remove("fade-in-element");
+
+        topLayerWho.classList.remove("fade-out-element");
+
+        title.style.display = "none";
+        title.classList.remove('type');
+        
+        bottomLayerWho.style.display = "none";
+        
+        setTimeout(function() {
+          whowrap.style.backgroundColor = 'white';
+          body[0].classList.add('open-circle');
+          body[0].classList.remove('close-circle');
+        }, 1000);
+      }, 5000);
+    })
   }, 10000);
 });
