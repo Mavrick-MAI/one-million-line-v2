@@ -22,10 +22,14 @@ function scrollFunction() {
     rightCard.classList.add('right-card-flip');
     rightCard.classList.remove('right-card-flip-back');
   } else {
-    leftCard.classList.add('left-card-flip-back');
-    leftCard.classList.remove('left-card-flip');
-    rightCard.classList.add('right-card-flip-back');
-    rightCard.classList.remove('right-card-flip');
+    if (leftCard.classList.contains('left-card-flip')) {
+      leftCard.classList.add('left-card-flip-back');
+      leftCard.classList.remove('left-card-flip');
+    }
+    if (rightCard.classList.contains('right-card-flip')) {
+      rightCard.classList.add('right-card-flip-back');
+      rightCard.classList.remove('right-card-flip');
+    }
   }
 }
 
@@ -151,6 +155,6 @@ learnMore.addEventListener('click', event => {
           body[0].classList.remove('close-circle');
         }, 1000);
       }, 5000);
-    })
+    });
   }, 10000);
 });

@@ -306,6 +306,7 @@ footer img {
   margin-top: 10%;
   background: radial-gradient(circle at 120px 50px, #5cabff, #21405a);
   animation: bluePillRotating 5s ease-in-out infinite;
+  cursor: pointer;
 }
 
 @keyframes bluePillRotating {
@@ -396,6 +397,7 @@ footer img {
   margin-top: 10%;
   background: radial-gradient(circle at 120px 50px, #d61212e5, #970101);
   animation: redPillRotating 5s ease-in-out infinite;
+  cursor: pointer;
 }
 
 @keyframes redPillRotating {
