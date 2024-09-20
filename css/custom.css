@@ -439,3 +439,12 @@ footer img {
   animation:openingCircle 5s 1;
   animation-fill-mode: forwards;
 }
+
+#neo {
+  display: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  overflow: hidden;
+}

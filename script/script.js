@@ -43,7 +43,7 @@ ctx = canvas.getContext( '2d' );
 var canvas2 = document.getElementById( 'matrix2' ),
 ctx2 = canvas2.getContext( '2d' ),
 // full screen dimensions
-cw = home.offsetWidth + who.offsetHeight,
+cw = home.offsetWidth,
 ch = home.offsetHeight + who.offsetHeight,
 charArr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'],
 maxCharCount = 200,
@@ -154,6 +154,19 @@ learnMore.addEventListener('click', event => {
           body[0].classList.add('open-circle');
           body[0].classList.remove('close-circle');
         }, 1000);
+      }, 5000);
+    });
+
+    var neo = document.getElementById('neo');
+    var redPill = document.getElementById('redPill');
+    redPill.addEventListener('click', (event) => {
+      body[0].classList.add('close-circle');
+      setTimeout(() => {
+        document.body.innerHTML = "";
+        body[0].classList.add('open-circle');
+        body[0].classList.remove('close-circle');
+        document.body.appendChild(neo);
+        neo.style.display = "block";
       }, 5000);
     });
   }, 10000);
